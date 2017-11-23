@@ -1,0 +1,17 @@
+import Model.Mapa.*
+
+describe "Test de Mapa"{
+
+
+test "Cuando el mapa agrega una persona esta queda en su lista de personas" {
+	mapa.agregarPersona("Roberto")
+	assert.that(mapa.personas().contains("Roberto"))
+}
+
+test "El mapa sabe cuanto porcentaje recorrio una persona con respecto a las lectoParadas totales"{
+	
+	assert.equals(0.5,mapa.porcentajeDelMapaRecorrido(["Obelisco","Casa Rosada"]))
+	
+}
+
+}
